@@ -1,6 +1,7 @@
 "use client";
 import ProductImage from "@/assets/product-image.png";
 import { DotLottiePlayer } from "@dotlottie/react-player";
+import { motion } from "framer-motion";
 const tabs = [
   {
     icon: "/assets/lottie/vroom.lottie",
@@ -31,7 +32,7 @@ const tabs = [
 export const Features = () => {
   return (
     <section className="py-20 md:py-24">
-      <div className="container">
+      <motion.div className="container">
         <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter">
           {" "}
           Elevate your SEO efforts
@@ -66,7 +67,7 @@ export const Features = () => {
             }}
           ></div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
