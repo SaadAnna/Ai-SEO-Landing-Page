@@ -93,6 +93,30 @@ const FeaturesTab = (tab: (typeof tabs)[number]) => {
   );
 };
 export const Features = () => {
+  const TabRef = useRef<HTMLDivElement>(null);
+  const dotlottieref = useRef<DotLottieCommonPlayer>(null);
+  const XPercentage = useMotionValue(0);
+  const YPercentage = useMotionValue(0);
+  const maskImage = useMotionTemplate`radial-gradient(80px 80px at ${XPercentage}% ${YPercentage}%,black,transparent)`;
+  useEffect(() => {  
+    animate(XPercentage, [0, 100, 100, 0, 0], {
+       duration: 5,
+      repeat: Infinity,
+      ease: "linear",
+      repeatType: "reverse",
+    });
+    animate(YPercentage, [0, 0, 100, 100, 0], {
+       duration: 5,
+      repeat: Infinity,
+      ease: "linear",
+      repeatType: "reverse",
+    });
+  }, [XPercentage, YPercentage]);
+  const HandleTabHover = () => {
+    if (dotlottieref.current === null) return;
+    dotlottieref.current.seek(0);
+    dotlottieref.current.play();
+  };
   return (
     <section className="py-20 md:py-24">
       <motion.div className="container">
@@ -111,11 +135,20 @@ export const Features = () => {
         </div>
         <div className="border border-white/20 p-2.5 rounded-xl mt-3 ">
           <div
-            className="aspect-video bg-cover border border-white/20 rounded-lg"
+          
+            className="aspect-video relative  bg-cover border border-white/20 rounded-lg"
             style={{
               backgroundImage: `url(${ProductImage.src})`,
             }}
-          ></div>
+          >
+        <motion.div
+          style={{
+            maskImage,
+          }}
+          className="absolute inset-0 -m-px rounded-xl border border-[#A369FF] "
+        ></motion.div>
+          </div>
+          
         </div>
       </motion.div>
     </section>
