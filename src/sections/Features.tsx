@@ -9,7 +9,7 @@ import {
   motion,
   useMotionTemplate,
   useMotionValue,
-  ValueAnimationTransition,
+  
 } from "framer-motion";
 import { use, useEffect, useRef } from "react";
 const tabs = [
@@ -93,8 +93,6 @@ const FeaturesTab = (tab: (typeof tabs)[number]) => {
   );
 };
 export const Features = () => {
-  const TabRef = useRef<HTMLDivElement>(null);
-  const dotlottieref = useRef<DotLottieCommonPlayer>(null);
   const XPercentage = useMotionValue(0);
   const YPercentage = useMotionValue(0);
   const maskImage = useMotionTemplate`radial-gradient(80px 80px at ${XPercentage}% ${YPercentage}%,black,transparent)`;
@@ -112,11 +110,7 @@ export const Features = () => {
       repeatType: "reverse",
     });
   }, [XPercentage, YPercentage]);
-  const HandleTabHover = () => {
-    if (dotlottieref.current === null) return;
-    dotlottieref.current.seek(0);
-    dotlottieref.current.play();
-  };
+  
   return (
     <section className="py-20 md:py-24">
       <motion.div className="container">
