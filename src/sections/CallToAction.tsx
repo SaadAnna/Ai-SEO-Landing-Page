@@ -34,7 +34,8 @@ export const CallToAction = () => {
         <div className="relative border border-white/15 py-24 rounded-xl cursor-pointer ]" style={{
      backgroundImage: `url(${StarBg.src})`, 
         }}>
-          <div className="absolute inset-0  bg-[rgb(74,32,138)] bg-blend-overlay [mask-image:radial-gradient(50%_50%_at_50%_35%,black,transparent)]" style={{
+          <div className="absolute inset-0  bg-[rgb(74,32,138)] bg-blend-overlay [mask-image:radial-gradient(50%_50%_at_50%_35%,black,transparent)]" 
+          style={{
   backgroundImage: `url(${GridLines.src})`,
           }}>
  

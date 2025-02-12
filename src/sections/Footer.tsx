@@ -1,3 +1,4 @@
+'use client';
 import MyLogoImage from "@/assets/logo.svg";
 import MyXLogo from "@/assets/social-x.svg";
 import MyYoutubeLogo from "@/assets/social-youtube.svg";
@@ -51,6 +52,7 @@ export const Footer = () => {
             <MyYoutubeLogo className="text-white/40 hover:text-white transition" />
             <MyInstagramLogo className="text-white/40 hover:text-white transition" />
           </div>
+          
         </div>
       </div>
     </footer>
