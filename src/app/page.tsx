@@ -5,6 +5,7 @@ import { Features } from '@/sections/Features';
 import { Testimonials } from "@/sections/Testimonials";
 import { CallToAction } from "@/sections/CallToAction";
 import { Footer } from "@/sections/Footer";
+import { Pricing } from "@/sections/Pricing";
 export default function Home() {
   return(
   <>
@@ -13,6 +14,7 @@ export default function Home() {
   <LogoTicker /> 
   <Features /> 
   <Testimonials /> 
+  <Pricing /> 
   <CallToAction /> 
   <Footer /> 
   </>
