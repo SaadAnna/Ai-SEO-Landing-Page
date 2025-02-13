@@ -1,19 +1,22 @@
-"use clent";
-
-import { Button } from "@/components/Button";
-import { Bungee_Outline } from "next/font/google";
+"use client";
+import {
+  animate,
+  useMotionTemplate,
+  useMotionValue,
+  motion,
+} from "framer-motion";
+import { useEffect } from "react";
 const pricings = [
   {
     type: false,
-
     featureOne: "• AI-powered keyword research",
     featureTwo: "• SEO audit & recommendations",
-    featureThree: "",
-    featureFour: "",
-    featureFive: "",
+    featureThree: "• Competitor analysis",
+    featureFour: "• Rank tracking",
+    featureFive: "• Backlink analysis",
     title: "Starter Package",
     price: "$49/month",
-    description: "saad anna is the best developer in the world",
+    BuyButton: "Get Started",
   },
   {
     title: "Growth Package",
@@ -22,9 +25,9 @@ const pricings = [
     featureTwo: "• AI-driven content suggestions",
     featureThree: "• Competitor analysis",
     featureFour: "• Rank tracking",
-    featureFive: "",
+    featureFive: "• Backlink analysis",
     price: "$99/month",
-    description: "saad anna is the best developer in the world",
+    BuyButton: "Get Started",
   },
   {
     title: "Enterprise Package",
@@ -35,11 +38,28 @@ const pricings = [
     featureFour: "• Rank tracking",
     featureFive: "• Advanced technical SEO insights",
     price: "$199/month",
-    description: "saad anna is the bst developer in the world",
+    BuyButton: "Get Started",
   },
 ];
 
 export const Pricing = () => {
+  const XPercentage = useMotionValue(0);
+  const YPercentage = useMotionValue(0);
+  const maskImage = useMotionTemplate`radial-gradient(80px 80px at ${XPercentage}% ${YPercentage}%,black,transparent)`;
+  useEffect(() => {
+    animate(XPercentage, [0, 100, 100, 0, 0], {
+      duration: 5,
+      repeat: Infinity,
+      ease: "linear",
+      repeatType: "reverse",
+    });
+    animate(YPercentage, [0, 0, 100, 100, 0], {
+      duration: 5,
+      repeat: Infinity,
+      ease: "linear",
+      repeatType: "reverse",
+    });
+  }, [XPercentage, YPercentage]);
   return (
     <section className="py-20">
       <div className="container">
@@ -50,12 +70,18 @@ export const Pricing = () => {
         <p className="text-white/70 text-lg md:text-xl max-w-xl mx-auto tracking-tight text-center mt-5">
           Choose the package that suits you and start your journey with us
         </p>
-        <div className="flex p-2.5 py-14 cursor-pointer rounded-xl gap-14 items-center lg:flex-1 flex-wrap justify-center">
+        <div className="flex p-2.5 py-16  rounded-xl gap-14 items-center lg:flex-1 flex-wrap justify-center">
           {pricings.map((pricing) => (
             <div
               key={pricing.title}
-              className="flex flex-col text-start justify-start gap-3 p-2.5 border border-white/20 rounded-xl w-[300px] h-[350px]"
+              className="flex flex-col relative  text-start justify-start gap-3 p-2.5 border border-white/20 rounded-xl w-[300px] h-[400px]"
             >
+              <motion.div
+                style={{
+                  maskImage,
+                }}
+                className="absolute inset-0 -m-px rounded-xl border border-[#A369FF] "
+              ></motion.div>
               <div className="flex justify-between  items-center">
                 <div className=" text-white/70 tracking-tighter font-medium text-2xl">
                   {pricing.price}
@@ -67,7 +93,7 @@ export const Pricing = () => {
                   </div>
                 )}
               </div>
-              
+
               <div className="text-2xl font-semibold tracking-tight bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.5))] text-transparent bg-clip-text">
                 {pricing.title}
               </div>
@@ -88,8 +114,9 @@ export const Pricing = () => {
                   {pricing.featureFive}
                 </h1>
               </div>
-                          <button className="w-20 h-20 bg-red-500">saad</button>
-
+              <div className="w-fit cursor-pointer mt-4 bg-gradient-to-t from-[#190d2e] to-[#4a208a] text-sm h-10 items-center p-2.5 rounded-lg justify-end bg-violet-600">
+                {pricing.BuyButton}
+              </div>
             </div>
           ))}
         </div>

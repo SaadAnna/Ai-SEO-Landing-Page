@@ -10,7 +10,7 @@ import {
   useMotionTemplate,
   useMotionValue,
 } from "framer-motion";
-import { use, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 const tabs = [
   {
     icon: "/assets/lottie/vroom.lottie",
