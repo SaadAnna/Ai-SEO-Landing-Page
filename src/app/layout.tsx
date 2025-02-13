@@ -5,19 +5,29 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+
   title: "AI Seo",
   description: "AI SEO Generator For All Startup For Optomize You Website Seo",
-  keywords: ["AI", "startup", "landing page", "Ai", "Seo"],
+  keywords: ["AI", "startup", "landing page", "Ai", "website", "SEO", "Ai Seo"],
   openGraph: {
-    title: "Ai Seo",
+    title: "AI SEO Startup ",
     description: "AI SEO Generator For All Startup For Optomize You Website Seo",
+    images: [
+      {
+        url: "@/assets/logo.svg", // Replace with your OpenGraph image
+        width: 1200,
+        height: 630,
+        alt: "AI Startup Landing Page",
+      },
+    ],
     url: "https://yourwebsite.com", // Replace with your website URL
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Seo Startup Landing Page",
-    description: "AI SEO Generator For All Startup For Optomize You Website Seo",// Replace with your Twitter image
+    title: "AI Startup Landing Page",
+    description: "AI SEO Generator For All Startup For Optomize You Website Seo",
+    images: ["@/assets/logo.svg"], // Replace with your Twitter image
   },
 };
 
