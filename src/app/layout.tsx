@@ -5,8 +5,20 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AI Startup Landing Page",
-  description: "A landing page for an AI startup created with Frontend Tribe",
+  title: "AI Seo",
+  description: "AI SEO Generator For All Startup For Optomize You Website Seo",
+  keywords: ["AI", "startup", "landing page", "Ai", "Seo"],
+  openGraph: {
+    title: "Ai Seo",
+    description: "AI SEO Generator For All Startup For Optomize You Website Seo",
+    url: "https://yourwebsite.com", // Replace with your website URL
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Seo Startup Landing Page",
+    description: "AI SEO Generator For All Startup For Optomize You Website Seo",// Replace with your Twitter image
+  },
 };
 
 export default function RootLayout({
