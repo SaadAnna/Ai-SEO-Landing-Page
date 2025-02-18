@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         alt: "AI Startup Landing Page",
       },
     ],
-    url: "https://yourwebsite.com", // Replace with your website URL
+    url: "https://somir.vercel.app/", // Replace with your website URL
     type: "website",
   },
   twitter: {
