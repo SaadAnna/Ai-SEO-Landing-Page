@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
   title: "AI Seo & Content Creator",
   description: "Elevate your SEO efforts. From small startups to large enterprises, our AI-driven tool has revolutionized the way businesses approach SEO.",
-  keywords: ["AI", "startup", "landing page", "Ai", "website", "SEO", "Ai Seo", "SaaS", "Developer", "Developers", "Programming", "Tools", "Tool", "Tools 2025", "AI Tools", "AI Tool", "Programmers Tools"],
+  keywords: ["AI", "startup", "landing page", "Ai", "Site", "Sites", "website", "SEO", "Ai Seo", "SaaS", "Developer", "Developers", "Programming", "Tools", "Tool", "Tools 2025", "AI Tools", "AI Tool", "Programmers Tools"],
   openGraph: {
     title: "AI SEO Startup ",
     description: "AI SEO Generator For All Startup For Optomize You Website Seo",
