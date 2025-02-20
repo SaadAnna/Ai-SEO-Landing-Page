@@ -11,7 +11,7 @@ export const Footer = () => {
           <div className="flex gap-2 items-center lg:flex-1">
             <MyLogoImage className="w-6 h-6" />
 
-            <div className="font-medium ">AI SEO 2025</div>
+            <div className="font-medium ">AI SEO 2025 SaaS</div>
           </div>
 
           <nav className="flex flex-col gap-5 lg:flex-row lg:gap-7 lg:flex-1 lg:justify-center">
