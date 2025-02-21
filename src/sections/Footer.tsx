@@ -31,7 +31,7 @@ export const Footer = () => {
               href="#"
               className="text-white/70 hover:text-white text-xs md:text-sm transition "
             >
-              Company
+              Pricing
             </a>
             <a
               href="#"
