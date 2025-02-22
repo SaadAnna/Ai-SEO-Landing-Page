@@ -44,7 +44,7 @@ const testimonials = [
     avatarImg: avatar2,
   },
   {
-    text: "“The user interface is so intuitive and easy to use, it has saved us countless hours”",
+    text: "“The user interface is so good, intuitive and easy to use, it has saved us countless hours”",
     name: "Alisa Hester",
     title: "Product @ Innovate",
     avatarImg: avatar3,
