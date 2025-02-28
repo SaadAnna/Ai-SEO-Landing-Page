@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   description: "Elevate your SEO efforts. From small startups or SaaS to large enterprises, our AI-driven tool has revolutionized the way businesses approach SEO.",
   keywords: ["AI", "startup", "landing page", "Ai", "Site", "Sites", "website", "SEO", "Ai Seo", "SaaS", "Developer", "Developers", "Programming", "Tools", "Tool", "Tools 2025", "AI Tools", "AI Tool", "Programmers Tools"],
   openGraph: {
-    title: "AI SEO Startup ",
-    description: "AI SEO Generator For All Startup For Optomize You Website Seo",
+    title: "AI SEO SaaS ",
+    description: "AI SEO Generator For All Startup & SaaS For Optomize You Website Seo",
     images: [
       {
         url: "@/assets/logo.svg", // Replace with your OpenGraph image
